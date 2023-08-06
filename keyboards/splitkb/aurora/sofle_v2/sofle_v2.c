@@ -223,6 +223,7 @@ void render_layer_state(void) {
     }
 }
 
+void oled_task_post_user(void);
 
 bool oled_task_kb(void) {
     if (!oled_task_user()) {
@@ -277,6 +278,7 @@ bool oled_task_kb(void) {
         // clang-format on
         oled_write_raw_P(aurora_art, sizeof(aurora_art));
     }
+    oled_task_post_user();
     return false;
 }
 #endif
