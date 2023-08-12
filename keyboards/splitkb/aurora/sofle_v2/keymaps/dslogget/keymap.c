@@ -32,11 +32,11 @@ enum my_keycodes { MO_DIS_GAME = QK_USER };
 
 /*
 [_trans] = LAYOUT(
-    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+    _______,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
+    _______,  _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
+    _______,   _______, _______, _______, _______, _______, _______,      _______, _______, _______, _______, _______, _______, _______,
+            _______, _______, _______, _______, _______,     _______,      _______, _______, _______, _______
 )
 */
 
@@ -46,29 +46,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,
         KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-        KC_NO,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_F24,  KC_MUTE, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, TG(_GAMING),
-               KC_LGUI, KC_LALT, KC_LSFT, KC_ENT,  MO_SYM,    MO_NAV,  KC_SPC,  KC_BSPC, KC_LCTL, KC_NO
+        XXXXXXX,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_F24,  KC_MUTE, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, TG(_GAMING),
+               KC_LGUI, KC_LALT, KC_LSFT, KC_ENT,  MO_SYM,    MO_NAV,  KC_SPC,  KC_BSPC, KC_LCTL, XXXXXXX
     ),
     [_GAMING] = LAYOUT(
-         KC_5, KC_ESC,  KC_1, KC_2, KC_3, KC_4,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-         KC_T, KC_TAB,  KC_Q, KC_W, KC_E, KC_R,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-         KC_G, KC_LSFT, KC_A, KC_S, KC_D, KC_F,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-         KC_B, KC_LCTL,   KC_Z, KC_X, KC_C, KC_V, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-               KC_LALT, KC_LSFT, KC_LCTL, KC_SPC, MO_DIS_GAME,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+         KC_5, KC_ESC,  KC_1, KC_2, KC_3, KC_4,                      _______, _______, _______, _______, _______, _______,
+         KC_T, KC_TAB,  KC_Q, KC_W, KC_E, KC_R,                      _______, _______, _______, _______, _______, _______,
+         KC_G, KC_LSFT, KC_A, KC_S, KC_D, KC_F,                      _______, _______, _______, _______, _______, _______,
+         KC_B, KC_LCTL,   KC_Z, KC_X, KC_C, KC_V, _______,      _______, _______, _______, _______, _______, _______, _______,
+               KC_LALT, KC_LSFT, KC_LCTL, KC_SPC, MO_DIS_GAME,     _______, _______, _______, _______, _______
     ),
     [_NAVIGATION] = LAYOUT(
         KC_F12,  KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,                      KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11,
-        KC_TRNS, KC_TRNS, KC_7, KC_8, KC_9, KC_TRNS,                  KC_TRNS, KC_TRNS, KC_UP, KC_PGUP, KC_PGUP, KC_TRNS,
-        KC_TRNS, KC_0, KC_4, KC_5, KC_6, KC_TRNS,                 KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_1, KC_2, KC_3, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_PGDN, KC_TRNS, KC_TRNS,
-                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+        _______, _______, KC_7, KC_8, KC_9, _______,                  _______, _______, KC_UP, KC_PGUP, KC_PGUP, _______,
+        _______, KC_0, KC_4, KC_5, KC_6, _______,                 KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, _______,
+        _______, _______, KC_1, KC_2, KC_3, _______, _______,      _______, _______, _______, _______, KC_PGDN, _______, _______,
+                _______, _______, _______, _______, _______,     _______,      _______, _______, _______, _______
     ),
     [_SYMBOLS] = LAYOUT(
-        KC_GRV,  KC_TRNS, KC_TRNS, RALT(KC_3), KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_7, KC_8, KC_9, KC_TRNS,                      KC_ASTR, KC_LCBR, KC_RCBR, KC_EQL, KC_TRNS, KC_DQUO,
-        KC_TRNS, KC_0, KC_4, KC_5, KC_6, KC_TRNS,                      KC_AMPR, KC_LPRN, KC_RPRN, KC_PLUS, KC_MINS, KC_QUOT,
-        KC_TRNS, KC_TRNS, KC_1, KC_2, KC_3, KC_TRNS, KC_TRNS,      KC_TRNS, KC_HASH, KC_LBRC, KC_RBRC, KC_UNDS, KC_BSLS, KC_TRNS,
-                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+        KC_GRV,  _______, _______, RALT(KC_3), _______, _______,                _______, _______, _______, _______, _______, _______,
+        _______, _______, KC_7, KC_8, KC_9, _______,                            KC_ASTR, KC_LCBR, KC_PLUS, KC_RCBR, _______, KC_DQUO,
+        _______, KC_0, KC_4, KC_5, KC_6, _______,                               KC_AMPR, KC_LPRN, KC_MINS, KC_RPRN, KC_EQL,  KC_QUOT,
+        _______, _______, KC_1, KC_2, KC_3, _______, _______,          _______, KC_HASH, KC_LBRC, KC_UNDS, KC_RBRC, KC_BSLS, _______,
+                _______, _______, _______, _______, _______,           _______, _______, _______, _______, _______
     ),
 };
 // clang-format on
